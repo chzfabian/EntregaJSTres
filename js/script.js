@@ -157,7 +157,7 @@ function createCards(productos, cart) {
 
             let cardImage = document.createElement("img")
             cardImage.className = "card-img-top"
-            cardImage.src = `../assets/imagenes/${rutaImagen}`
+            cardImage.src = `./assets/imagenes/${rutaImagen}`
 
             let cardBody = document.createElement("div")
             cardBody.className = "card-body"
