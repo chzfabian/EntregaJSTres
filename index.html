@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Bienvenido a KioskoLaufa, para la compra diaria y cotidiana. pedidos rapidos y elaborados" />
+    <meta name="keywords" content="kiosko,ventas,gaseosas,24horas,musica,todo">
+    <script src="https://kit.fontawesome.com/efc9165130.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style.css">
+    <!-- Icon Buttons -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="./assets/imagenes/">
+    <title>Kiosko Laufa</title>
+    <link rel="shortcut icon" href="./assets/imagenes/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <header class="container-fluid top-header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="./assets/imagenes/Kiosko.png" class="logo" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#menu-collapsed-content" aria-controls="menu-collapsed-content"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse gap-2" id="menu-collapsed-content">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link menu-white" href="#" id="tienda">Tiendita</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle menu-white" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Articulos</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item drop-violet" href="#" id="perro">Los más vendidos</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item drop-violet" href="#" id="gato">Bebidas</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-white d-none" aria-disabled="true" href="#" id="cartUpdate"
+                                data-bs-toggle="modal" data-bs-target="#cartModal">Ver carrito
+                                <i class="fa-solid fa-cart-shopping white"></i> </a>
+                        </li>
+                    </ul>
+                    <form class="d-flex w-auto gap-2" role="search">
+                        <input class="form-control" type="Buscar" placeholder="¿Qué producto estás buscando?"
+                            aria-label="Buscar" id="form-imput-search">
+                        <button class="btn btn-outline-warning white" type="submit" id="search-button">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="col-12 my-5">
+                <h3 class="violet-light">Kiosko Laufa, variedad de productos al alcance de tus manos</h3>
+            </div>
+            <div class="row">
+                <div id="no-products-message" class="text-center text-muted" style="display: none;">
+                    No se encontraron productos.
+                </div>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-2" id="products">
+                    <div class="col"> 
+                        <div class="card h-100"><img class="card-img-top" src="./assets/imagenes/fotouno.png">
+                            <div class="card-body">
+                                <h3>Alfajor</h3>   
+                                <h5>Alfajor Jorgito</h5>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="col">
+                        <div class="card h-100"><img class="card-img-top" src="./assets/imagenes/fotodos.png">
+                            <div class="card-body">
+                                <h3>Galleticas</h3>
+                                <h5>Terrabusi</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100"><img class="card-img-top" src="./assets/imagenes/fototres.png">
+                            <div class="card-body">
+                                <h3>Chocolate</h3>
+                                <h5>ChocoFan</h5>
+                                <form id="form-4" class="flex-column"><label class="d-flex gap-2"><input type="radio"
+                                            name="variante-4" value="0" required=""></label><label
+                                        class="d-flex gap-2"><input type="radio" name="variante-4" value="1"
+                                            required="">$ 500</label><button type="submit"
+                                        class="btn btn-primary btn-sm btn-violet">Agregar al carrito <i
+                                            class="fa-solid fa-cart-shopping"></i></button></form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100"><img class="card-img-top" src="./assets/imagenes/fotocuatro.png">
+                            <div class="card-body">
+                                <h3>Chicles</h3>
+                                <h5>Beldent Poseidon</h5>
+                                <form id="form-5" class="flex-column"><label class="d-flex gap-2"><input type="radio"
+                                            name="variante-5" value="0" required="">$600</label><label
+                                        class="d-flex gap-2"><input type="radio" name="variante-5" value="1"
+                                            required=""></label><button type="submit"
+                                        class="btn btn-primary btn-sm btn-violet">Agregar al carrito <i
+                                            class="fa-solid fa-cart-shopping"></i></button></form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100"><img class="card-img-top" src="./assets/imagenes/fotocinco.png">
+                            <div class="card-body">
+                                <h3>Gomitas</h3>
+                                <h5>Goma Piñata</h5>
+                                <p>$900</p><button class="btn btn-primary btn-sm btn-violet">Agregar al carrito <i
+                                        class="fa-solid fa-cart-shopping"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100"><img class="card-img-top"
+                                src="./assets/imagenes/fotoseis.png">
+                            <div class="card-body">
+                                <h3>Gomitas</h3>
+                                <h5>Marshmallows</h5>
+                                <p>$800</p><button class="btn btn-primary btn-sm btn-violet">Agregar al carrito <i
+                                        class="fa-solid fa-cart-shopping"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100"><img class="card-img-top"
+                                src="./assets/imagenes/fotosiete.png">
+                            <div class="card-body">
+                                <h3>Galleticas</h3>
+                                <h5>TrioPepas</h5>
+                                <p>$700</p><button class="btn btn-primary btn-sm btn-violet">Agregar al carrito <i
+                                        class="fa-solid fa-cart-shopping"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100"><img class="card-img-top" src="./assets/imagenes/fotoocho.png" id="">
+                            <div class="card-body">
+                                <h3>Galleticas</h3>
+                                <h5>Bizcochos</h5>
+                                <p>$580</p><button class="btn btn-primary btn-sm btn-violet">Agregar al carrito <i
+                                        class="fa-solid fa-cart-shopping"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100"><img class="card-img-top" src="./assets/imagenes/fotonueve.png">
+                            <div class="card-body">
+                                <h3>Bebidas</h3>
+                                <h5>Baggio Durazno 1L</h5>
+                                <p>$550</p><button class="btn btn-primary btn-sm btn-violet">Agregar al carrito <i
+                                        class="fa-solid fa-cart-shopping"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100"><img class="card-img-top" src="./assets/imagenes/fotodiez.png">
+                            <div class="card-body">
+                                <h3>Bebidas</h3>
+                                <h5>Agua Mineral 600ml</h5>
+                                <p>$300</p><button class="btn btn-primary btn-sm btn-violet">Agregar al carrito <i
+                                        class="fa-solid fa-cart-shopping"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100"><img class="card-img-top" src="./assets/imagenes/fotoonce.png">
+                            <div class="card-body">
+                                <h3>Bebidas</h3>
+                                <h5>Baggio Fresh Liv</h5>
+                                <p>$17990</p><button class="btn btn-primary btn-sm btn-violet">Agregar al carrito <i
+                                        class="fa-solid fa-cart-shopping"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                </div>
+            </div> 
+            <section>
+            <!-- Modal -->
+            <div class="modal fade" id="cartModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="cartModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="cartModalLabel">Carrito de compras</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" id="modalCart">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary btn-sm"
+                                data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-primary btn-sm btn-violet"
+                                id="comprar">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+        <hr>
+        <footer class="container-fluid pt-3">
+            <div id="footer_content" class="row">
+        
+              <div id="footer_contacts" class="col-md-3 col-12">
+                <a><img src="./assets/imagenes/Kiosko.png"></a>
+                <p>Tu compra al alcance de tus manos.<p>
+        
+                <div id="footer_social_media">
+                  <a href="https://www.instagram.com/kioskolaufa/" class="footer-link" id="instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+        
+                  <a href="https://www.facebook.com/" class="footer-link" id="facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+        
+                  <a href="https://web.whatsapp.com/" class="footer-link" id="whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                  </a>
+                </div>
+              </div>
+        
+              <ul class="footer-list col-md-3 col-12">
+                <li>
+                  <h4>Información</h4>
+                </li>
+                <li>
+                  <a>SociosVIP KioskoLaufa</a>
+                </li>
+                <li>
+                  <a>Servicio TakeAway</a>
+                </li>
+                <li>
+                  <a>Proveedores Mayoristas</a>
+                </li>
+              </ul>
+        
+              <ul class="footer-list col-md-3 col-12">
+                <li>
+                  <h4>Dirección</h4>
+                </li>
+                <li>
+                  <a>100 Flores, CABA Argentina. 1902CP</a>
+                </li>
+                <li>
+                  <a>kioskolaufa@gmail.com</a>
+                </li>
+                <li>
+                  <a>+54 911 12 345678</a>
+                </li>
+              </ul>
+              <div id="footer_subscribe" class="col-md-3 col-12">
+                <h4>Subscribir</h4>
+        
+                <p>
+                  Ingrese su correo electrónico para recibir notificaciones sobre
+                  nuestras actualizaciones de productos e informacion para de socios KioskoLaufa.
+                </p>
+                
+                <div id="input_group">
+                  <input type="email" id="email">
+                  <button>
+                    <i class="fa-regular fa-envelope"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div id="footer_copyright">
+              ©
+              2023, www.kioskolaufa.com
+            </div>
+          </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
